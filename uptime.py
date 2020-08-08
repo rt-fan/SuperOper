@@ -3,7 +3,6 @@ from const import *
 import sys
 from datetime import *
 
-
 oid_uptime = '1.3.6.1.2.1.1.3'
 answer_sys_uptime = ''
 
