@@ -68,7 +68,6 @@ def interface_list(host, oid):
                     else:
                         status = str(varBind[-1])
                     status_list[index] = status
-                    # продолжить
 
                 elif oid == oid_speed:  # SPEED
                     index = str(varBind[0][-1])
@@ -83,19 +82,16 @@ def interface_list(host, oid):
                     else:
                         speed = 'unkown speed'
                     speed_list[index] = speed
-                    # продолжить
 
                 elif oid == oid_inErr:  # INPUT ERROR
                     index = str(varBind[0][-1])
                     in_error = str(varBind[-1])
                     inErr_list[index] = in_error
-                    # продолжить
 
                 elif oid == oid_outErr:  # OUTPUT ERROR
                     index = str(varBind[0][-1])
                     out_error = str(varBind[-1])
                     outErr_list[index] = out_error
-                    # продолжить
 
                 else:
                     print('прочее')
@@ -127,8 +123,3 @@ def search_port(ip, port):
             answer_outError = outErr_list.get(key_port)
 
             return answer_description, answer_status, answer_speed, answer_inError, answer_outError
-
-
-# search_port('10.11.1.86', 5)
-# print(answer_description, answer_status, answer_speed, answer_inError, answer_outError)
-# print(description_list)
